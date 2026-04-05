@@ -1,15 +1,15 @@
-# NovaMind — Chat UI
+# Healing — AI Chat UI
 
-A modern, responsive AI chat interface built for the CampusPe Gen AI Assignment.  
+A modern, responsive AI chat interface built for the CampusPe Gen AI Assignment.
 Inspired by Claude and ChatGPT — built with HTML, CSS, JavaScript, jQuery, and Bootstrap 5.
 
 ---
 
 ## How to Run
 
-1. Unzip `YourName_ChatUI.zip`
+1. Unzip 
 2. Open `index.html` in any modern browser (Chrome, Firefox, Safari, Edge)
-3. No server or installation required — it runs entirely in the browser
+3. No server or installation required — runs entirely in the browser
 
 ---
 
@@ -24,8 +24,7 @@ YourName_ChatUI/
 │   └── chat.js         ← All JavaScript + jQuery functionality
 ├── screenshots/
 │   ├── desktop.png
-│   ├── tablet.png
-│   └── mobile.png
+│   
 └── README.md           ← This file
 ```
 
@@ -36,37 +35,37 @@ YourName_ChatUI/
 ### Task 1 — HTML Structure (25 pts)
 - Semantic HTML5 (`header`, `main`, `section`, `aside`, `footer`)
 - Bootstrap 5, Font Awesome 6, and Google Fonts (Syne + DM Sans) linked via CDN
-- Welcome screen with 4 suggestion cards in a grid
+- Welcome screen with 4 clickable suggestion cards in a grid layout
 - Input area with attach button, auto-resizing textarea, and send button
-- Typing indicator with animated dots
+- Typing indicator with animated bouncing dots
 
 ### Task 2 — CSS Styling (35 pts)
-- 20+ CSS custom properties (colors, spacing, radius, shadows, transitions)
-- User messages: right-aligned, purple gradient bubble
-- AI messages: left-aligned, soft background bubble
-- Circular avatars with gradient backgrounds (different per sender)
-- Focus state on input with accent border + glow
+- 20+ CSS custom properties for colors, spacing, radius, shadows, and transitions
+- User messages: right-aligned with purple gradient bubble
+- AI messages: left-aligned with soft background bubble
+- Circular avatars with distinct gradient backgrounds per sender
+- Focus state on input with accent border and glow ring
 - Send button with enabled/disabled states and hover effects
-- Keyframe animations: `welcomeSlideIn`, `messageFadeIn`, `typingBounce`, `iconPulse`
-- Custom scrollbar styling
+- Four keyframe animations: `welcomeSlideIn`, `messageFadeIn`, `typingBounce`, `iconPulse`
+- Custom scrollbar styling throughout
 
 ### Task 3 — JavaScript & jQuery (25 pts)
-- `addMessage(text, sender)` — creates and appends message bubbles with timestamp
-- `sendMessage()` — full flow: validate → hide welcome → append user msg → show typing → AI response
-- `scrollToBottom()` — smooth auto-scroll on new messages
+- `addMessage(text, sender)` — creates and appends message bubbles with live timestamp
+- `sendMessage()` — full flow: validate → hide welcome screen → append user message → show typing → AI response
+- `scrollToBottom()` — smooth auto-scroll whenever a new message appears
 - Send button enabled only when textarea has content
-- Enter sends; Shift+Enter inserts new line
-- Input clears after send; textarea auto-resizes
+- Enter key sends; Shift+Enter inserts a new line
+- Input clears after sending; textarea auto-resizes as user types
 - Empty message prevention
-- Mock AI responses array with random selection + 1–2.2s simulated delay
+- 10 mock AI responses with random selection and 1–2.2s simulated delay
 
 ### Task 4 — Sidebar & Mobile (15 pts)
-- Sidebar fixed at 260px with New Chat button, scrollable history, and user profile
+- Sidebar fixed at 260px with New Chat button, scrollable chat history, and user profile section
 - Sidebar slides in from left on mobile via CSS transform
-- Semi-transparent overlay on mobile when sidebar is open
-- Hamburger menu button (visible only on mobile)
-- Suggestion cards stack vertically on mobile
-- Message bubbles expand to 88–92% on small screens
+- Semi-transparent overlay with blur when sidebar is open on mobile
+- Hamburger menu button visible only on mobile
+- Suggestion cards stack vertically on small screens
+- Message bubbles expand to 88–92% width on small screens
 - Fully tested from 320px to 1920px
 
 ---
@@ -75,30 +74,40 @@ YourName_ChatUI/
 
 | Feature | Points |
 |---|---|
-| Dark mode toggle (smooth transition) | 4 pts |
-| Message formatting (bold, italic, inline code, code blocks) | 3 pts |
-| Typewriter animation for AI responses | 4 pts |
-| Export chat as `.txt` file (Blob API) — `Ctrl+Shift+E` | 3 pts |
+| Dark mode toggle with smooth theme transition | 4 pts |
+| Message formatting — bold, italic, inline code, code blocks | 3 pts |
+| Typewriter animation — AI response types out letter by letter | 4 pts |
+| Export chat as `.txt` file using Blob API (`Ctrl+Shift+E`) | 3 pts |
 | Custom scrollbar styling | 2 pts |
-| Copy message button per AI message | — |
+| Copy button on each AI message | — |
 
-**Total bonus eligible: 16 pts (cap at 10)**
+**Total bonus eligible: 16 pts (assignment cap at 10)**
 
 ---
 
 ## Design Decisions
 
-- **Font**: Syne (display, headings) + DM Sans (body) — distinctive and modern
-- **Accent**: `#6C63FF` — vibrant violet that feels premium but accessible
-- **Theme**: Soft light mode by default; deep dark mode available via toggle
-- **Animations**: Subtle and purposeful — fade-ins, bouncing dots, icon pulse
-- **Accessibility**: ARIA labels, roles, `aria-live` on messages, keyboard navigation
+- **Font**: Syne (headings/logo) + DM Sans (body) — distinctive and modern pairing
+- **Accent color**: `#6C63FF` — vibrant violet, accessible contrast on both themes
+- **Theme**: Clean light mode by default; deep dark mode via sidebar toggle
+- **Animations**: Subtle and purposeful — no overdone effects
+- **Accessibility**: ARIA labels, roles, `aria-live` on message area, full keyboard navigation
+
+---
+
+## How to Take Screenshots
+
+1. Open `index.html` in Chrome
+2. **Desktop** — take a normal fullscreen screenshot → save as `screenshots/desktop.png`
+3. Press `F12` → click the device toolbar icon
+4. **Mobile** — set width to 375px → screenshot → save as `screenshots/mobile.png`
+5. **Tablet** — set width to 768px → screenshot → save as `screenshots/tablet.png`
 
 ---
 
 ## Browser Support
 
-Tested on: Chrome 124+, Firefox 125+, Safari 17+, Edge 124+
+Tested on: Chrome 124+,Edge 124+
 
 ---
 
@@ -107,10 +116,8 @@ Tested on: Chrome 124+, Firefox 125+, Safari 17+, Edge 124+
 | Library | Version | Purpose |
 |---|---|---|
 | Bootstrap 5 | 5.3.3 | Grid, utilities, responsive helpers |
-| Font Awesome | 6.5.1 | Icon set |
+| Font Awesome | 6.5.1 | Icon set throughout the UI |
 | jQuery | 3.7.1 | DOM manipulation, events, animations |
 | Google Fonts | — | Syne + DM Sans typography |
 
 ---
-
-*Submission for CampusPe Gen AI Assignment — April 2026*
